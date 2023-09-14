@@ -24,7 +24,7 @@ export const Contact = () => {
     <main>
 
 
-        <div>
+       
 
             {/* This is the form section */}
             <form action='#' method='post' onSubmit={handleSubmit}>
@@ -74,15 +74,15 @@ export const Contact = () => {
                 <button type="submit">Submit</button>
 
 
-                <p>
-                    {data.fName} {data.lName} {data.cName}, {data.inquiry} {data.message} {data.link} {data.inquiry} 
-                </p>
+                {/* <p>
+                    {data.fName} {data.lName} {data.cName} {data.inquiry} {data.message} {data.link} {data.inquiry} 
+                </p> */}
 
 
 
 
             </form>
-        </div>
+       
 
         <div className='info'>
             {/* This section is for information */}
