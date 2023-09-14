@@ -21,7 +21,7 @@ form{
 }
 
 
-form input, textarea{
+form input, select, textarea{
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -47,13 +47,13 @@ main div{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 23%;
+    width: 35%;
     text-align: center;
 
 }
 
 .info h4{
-    font-size: 1.1rem;
+    font-size: 1.6rem;
     font-weight: 700;
     margin-bottom: 0.2rem;
    
@@ -61,14 +61,15 @@ main div{
 
 
 .info p{
-    font-size: 0.6rem;
+    font-size: 0.8rem;
     font-weight: 500;
     margin-top: 0;
     
 }
 
-.info span{
+.info a{
     color: orangered;
+    text-decoration: none;
     font-weight: 700;
 }
 

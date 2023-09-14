@@ -4,7 +4,7 @@ import { useState } from 'react';
 
 export const Contact = () => {
     const [data, setData] = useState(
-        {fName:"", lName:"", cName:"", inquiry:"", message:"", link:"" }
+        {fName:"", lName:"", cName:"", inquiry:"", message:"", link:""}
     )
 
     const handleChange = (e) => {
@@ -31,62 +31,52 @@ export const Contact = () => {
                 <div className='names'>
 
                     <div>
-                    <label>First name</label> 
-                    <input type="text" name="fName" placeholder="John" onChange={handleChange} value={data.name} required /> <br />
+                    <label for="fname">First name</label> 
+                    <input type="text" name="fName" id="fname" placeholder="John" onChange={handleChange} value={data.name} required /> <br />
 
                     </div>
 
                     <div>
-                    <label>Last name</label>
-                    <input type="text" name="lName" placeholder="Doe" onChange={handleChange} value={data.name} required /> <br />
+                    <label for="lname">Last name</label>
+                    <input type="text" name="lName" placeholder="Doe"  id="lname" onChange={handleChange} value={data.name} required /> <br />
 
                     </div>
                 
 
                
 
-
-                </div>
+              </div>
 
                 
-                <label>Company name</label>
-                <input type="text" name="cName" cols={15} rows={1}  onChange={handleChange} value={data.name} required /> <br />
+                <label for="cName">Company name</label>
+                <input type="text" name="cName" cols={15} rows={1} id="cName" onChange={handleChange} value={data.name} required /> <br />
 
-                <label>Inquiry type</label>
-                <textarea name="inquiry" placeholder='please select' cols={15} rows={1} onChange={handleChange} value={data.name} required></textarea> <br />
+                <label for="inquiry">Inquiry type</label> 
+                <select name="inquiry" id="inquiry"  value={data.inquiry} required>
+                <option value="Smart Contract Audit">Smart Contract Audit</option>
+                <option value="Smart Contract Security">Smart Contract Security</option>
+                <option value="Smart Contract Testing">Smart Contract Testing</option>
+                <option value="Web3 Development">Web3 Development</option>
+                <option value="Web3 Consultation">Web3 Consultation</option>
+                </select> <br></br>
 
-
-                {/* <label>Smart Contract Security</label>
-                <input type="checkbox" name="enquiry"  value="Smart Contract Security" placeholder='please select' required /> <br />
-                
-                <label>Smart Contract Testing</label>
-                <input type="checkbox" name="enquiry"  value="Smart Contract Testing" placeholder='please select' required /> <br />
-
-                <label>Smart Contract Auditing</label>
-                <input type="checkbox" name="enquiry"  value="Smart Contract Auditing" placeholder='please select' required /> <br />
-
-                <label>Web3 Development</label>
-                <input type="checkbox" name="enquiry"  value="SWeb3 Developmen" placeholder='please select' required /> <br />
-
-                <label>Web3 Security</label>
-                <input type="checkbox" name="enquiry"  value="eb3 Security" placeholder='please select' required /> <br /> */}
+              
 
 
+                <label for="message">What can Algorinth labs do for you?</label>
+                <textarea name="message" cols={15} rows={10} id="message" onChange={handleChange} value={data.name} required></textarea> <br />
 
-                <label>What can Algorinth labs do for you?</label>
-                <textarea name="message" cols={15} rows={10} onChange={handleChange} value={data.name} required></textarea> <br />
-
-                <label>Link to project on Github</label>
-                <input type="url" name="link" onChange={handleChange} value={data.name} required /> <br />
+                <label for="link">Link to project on Github</label>
+                <input type="url" name="link" id="link" onChange={handleChange} value={data.name} required /> <br />
 
                 {/* <input type="submit" name="submit" value="submit" /> */}
 
                 <button type="submit">Submit</button>
 
 
-                {/* <p>
-                    {data.fName} {data.lName} {data.cName}, {data.inquiry} {data.message} {data.link}
-                </p> */}
+                <p>
+                    {data.fName} {data.lName} {data.cName}, {data.inquiry} {data.message} {data.link} {data.inquiry} 
+                </p>
 
 
 
@@ -102,7 +92,7 @@ export const Contact = () => {
             </h4>
 
             <p>
-                For secure communications, please use <span>SendSafely</span> .
+                For secure communications, please use  <a href="https://www.sendsafely.com/u/admin@algorinthlabs.com">SendSafely</a>.
             </p>
 
         </div>
