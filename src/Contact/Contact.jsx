@@ -11,7 +11,13 @@ export const Contact = () => {
         const name = e.target.name;
         const value = e.target.value;
 
-        setData({...data, [name]: value})
+        // setData({...data, [name]: value})
+
+        setData((prev)=>({
+            ...prev,
+            [name]: value
+            }))
+            
     }
 
     const handleSubmit = (e) => {
